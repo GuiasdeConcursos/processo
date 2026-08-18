@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roteiro Integrado de Inquirição — 0011652-20.2025.5.03.0037</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F8FA;--paper-2:#FFFFFF;
+  --ink:#141E29;--ink-2:#4C5A68;--ink-3:#75828E;--rule:#D2D9E1;
+  --oxide:#A02C24;--oxide-bg:#FBEFEE;
+  --amber:#7E6212;--amber-bg:#FBF4E2;
+  --seal:#1C4A58;--seal-bg:#E8F0F2;
+  --gold:#7A5B0B;--gold-bg:#FAF3DF;
+  --display:"Archivo",system-ui,sans-serif;
+  --body:"Newsreader",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --measure:76ch;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;font-optical-sizing:auto}
+.wrap{max-width:calc(var(--measure) + 60px);margin:0 auto;padding:0 24px 110px}
+
+.masthead{border-bottom:1.5px solid var(--ink);padding:52px 0 20px;margin-bottom:22px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--oxide);margin:0 0 14px}
+.masthead h1{font-family:var(--display);font-weight:700;font-size:clamp(26px,5vw,40px);line-height:1.05;letter-spacing:-.02em;margin:0 0 6px}
+.masthead .proc{font-family:var(--mono);font-size:clamp(12px,2.3vw,16px);font-weight:500;color:var(--oxide);margin:0}
+
+#tabs{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule);
+  display:flex;gap:2px;overflow-x:auto;padding:10px 0 0;margin-bottom:28px}
+#tabs button{flex:0 0 auto;font-family:var(--display);font-size:13px;font-weight:600;background:none;border:none;
+  border-bottom:2px solid transparent;color:var(--ink-3);padding:9px 14px;cursor:pointer;white-space:nowrap;transition:color .15s,border-color .15s}
+#tabs button:hover{color:var(--ink)}
+#tabs button.on{color:var(--oxide);border-bottom-color:var(--oxide)}
+#tabs button .pr{font-family:var(--mono);font-size:9.5px;display:block;font-weight:500;letter-spacing:.08em;opacity:.75}
+.pane{display:none}.pane.on{display:block}
+
+h2{font-family:var(--display);font-weight:600;font-size:clamp(21px,3.2vw,28px);line-height:1.15;letter-spacing:-.016em;margin:0 0 14px}
+h3{font-family:var(--display);font-weight:600;font-size:17.5px;margin:34px 0 10px;letter-spacing:-.006em}
+h4{font-family:var(--mono);font-weight:600;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);margin:28px 0 9px;
+  border-bottom:1px solid var(--rule);padding-bottom:6px}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1.1em;padding-left:1.2em}
+li{margin-bottom:.45em}li::marker{color:var(--ink-3)}
+strong{font-weight:600}
+
+.fls{font-family:var(--mono);font-size:.83em;font-weight:500;color:var(--seal);background:var(--seal-bg);padding:.08em .36em;border-radius:2px;white-space:nowrap}
+.file{font-family:var(--mono);font-size:.85em;background:#EAEEF2;padding:.08em .32em;border-radius:2px;word-break:break-all}
+
+.who{background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--seal);padding:18px 20px;margin:0 0 24px}
+.who .nm{font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.012em;margin:0}
+.who .rl{font-size:15.5px;color:var(--ink-2);margin:3px 0 14px}
+.who dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:13px 20px;margin:0;border-top:1px solid var(--rule);padding-top:13px}
+.who dt{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0 0 4px}
+.who dd{margin:0;font-size:14.5px;line-height:1.4}
+
+.note{margin:20px 0;padding:16px 18px;border:1px solid var(--rule);border-left:3px solid var(--seal);background:var(--paper-2);font-size:16px}
+.note .tag{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--seal);margin-bottom:7px}
+.note p:last-child{margin:0}
+.note.warn{border-left-color:var(--amber);background:var(--amber-bg)}.note.warn .tag{color:var(--amber)}
+.note.key{border-left-color:var(--oxide);background:var(--oxide-bg)}.note.key .tag{color:var(--oxide)}
+.note.gold{border-left-color:var(--gold);background:var(--gold-bg)}.note.gold .tag{color:var(--gold)}
+
+blockquote{margin:18px 0;padding:14px 18px;background:var(--paper-2);border-left:3px solid var(--ink);font-size:16px;line-height:1.5}
+blockquote p{margin:0 0 .6em}blockquote p:last-child{margin:0}
+blockquote cite{display:block;margin-top:9px;font-family:var(--mono);font-style:normal;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+
+.q{border-top:1px solid var(--rule);padding:18px 0 6px}
+.qh{display:flex;gap:11px;align-items:baseline;margin-bottom:9px;flex-wrap:wrap}
+.qn{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--paper-2);background:var(--oxide);padding:2px 7px;border-radius:2px;flex:0 0 auto}
+.q.star .qn{background:var(--gold)}
+.qt{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:-.005em}
+.qbody{border-left:3px solid var(--oxide);background:var(--paper-2);padding:13px 16px;margin:0 0 10px;font-size:16.5px;line-height:1.52}
+.q.star .qbody{border-left-color:var(--gold);background:var(--gold-bg)}
+.qmeta{font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--seal);margin:0 0 7px}
+.qmeta b{font-weight:600}
+.qwhy{font-size:14.5px;line-height:1.5;color:var(--ink-2);font-style:italic;margin:0 0 4px}
+.qwhy b{font-style:normal;font-weight:600}
+.orig{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);letter-spacing:.03em;margin:0 0 8px}
+
+.tbl{width:100%;border-collapse:collapse;margin:20px 0;font-size:14.5px}
+.tbl th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:left;font-weight:600;padding:0 10px 8px 0;border-bottom:1.5px solid var(--ink)}
+.tbl td{padding:10px 10px 10px 0;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.42}
+.tbl tr:last-child td{border-bottom:none}
+.tbl-scroll{overflow-x:auto}
+.cut{color:var(--oxide);font-weight:600}
+.keep{color:var(--seal);font-weight:600}
+
+.chain{margin:24px 0;border:1px solid var(--rule);background:var(--paper-2)}
+.chain .lk{display:grid;grid-template-columns:78px 1fr;gap:16px;padding:16px 18px;border-bottom:1px solid var(--rule)}
+.chain .lk:last-child{border-bottom:none}
+.chain .who2{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--oxide);padding-top:2px}
+.chain .txt{font-size:15.5px;line-height:1.5}
+.chain .txt b{font-weight:600}
+
+footer{border-top:1.5px solid var(--ink);margin-top:50px;padding-top:18px;font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--ink-3)}
+
+@media print{
+  #tabs{display:none}
+  .pane{display:block !important;break-before:page}
+  .pane:first-of-type{break-before:auto}
+  body{background:#fff;font-size:10.5pt;line-height:1.4}
+  .wrap{max-width:100%;padding:0}
+  .q,.note,blockquote,.who,.tbl,.chain .lk{break-inside:avoid}
+  h2,h3,h4,.qh{break-after:avoid}
+  .fls,.file{background:none;border:1px solid #ccc}
+}
+:focus-visible{outline:2px solid var(--oxide);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Roteiro integrado · três testemunhas · uso interno da defesa</p>
+  <h1>Felipe, Ênio, Guaraçay</h1>
+  <p class="proc">0011652-20.2025.5.03.0037 · 3ª VT de Juiz de Fora · TRT-3</p>
+</header>
+
+<nav id="tabs" aria-label="Seções">
+  <button data-p="p0" class="on">Auditoria<span class="pr">Leia primeiro</span></button>
+  <button data-p="p1">Felipe<span class="pr">Depoente 1</span></button>
+  <button data-p="p2">Ênio<span class="pr">Depoente 2</span></button>
+  <button data-p="p3">Guaraçay<span class="pr">Depoente 3</span></button>
+  <button data-p="p4">Cruzamentos<span class="pr">A cadeia</span></button>
+</nav>
+
+<!-- ═══════════ P0 ═══════════ -->
+<section class="pane on" id="p0">
+  <h2>O que precisa sair antes de tudo</h2>
+  <p>Conferi as duas minutas folha por folha contra os autos. O material é bom e há duas descobertas excelentes que eu não tinha. Mas há também <strong>um erro grave em cada documento</strong>, e ambos estão em posição de destaque — a pergunta de abertura do Ênio e um bloco inteiro. Se forem à mesa, a testemunha desfaz em uma frase e contamina o resto.</p>
+
+  <div class="note warn">
+    <span class="tag">Erro 1 — os “65 minutos” não existem</span>
+    <p>O Bloco 1 do roteiro do Ênio é construído sobre a tese de que, 65 minutos depois de anunciar o encerramento, ele recebeu o material que reverteu tudo. Dois problemas:</p>
+    <p><strong>A conta está errada.</strong> De 12h04 a 15h09 vão <strong>3 horas e 5 minutos</strong>, não 65 minutos.</p>
+    <p><strong>E o conteúdo está errado.</strong> O e-mail de Felipe das 15h09 não trazia a Nota Técnica nem o <span class="file">Artefatos.zip</span>. Era um encaminhamento interno à Sra. Adriana Meiko Eguchi Asami com a frase “peço analisar a demanda, por gentileza” <span class="fls">fls. 191</span>. O material só chegou pelo Ofício nº 32/2023, de 17/08/2023, recebido pela Corregedoria em <strong>11/09/2023</strong> — seis semanas depois.</p>
+    <p>Uma testemunha que abre o depoimento corrigindo a aritmética do advogado ganha o resto da sessão. <strong>Reconstruí esse bloco inteiro</strong> — e a versão verdadeira é mais forte, porque o intervalo real de seis semanas torna a virada ainda menos explicável.</p>
+  </div>
+
+  <div class="note warn">
+    <span class="tag">Erro 2 — o HD lacrado não cria impossibilidade física</span>
+    <p>O Bloco 3 do Ênio sustenta que, estando o HD lacrado e não havendo perícia, seria fisicamente impossível extrair qualquer arquivo — logo os executáveis “vieram de outro lugar”.</p>
+    <p>A premissa não se sustenta. Os artefatos do Anexo I foram coletados <strong>da máquina ligada, em 07 a 11/11/2022, por Live Response e Advanced Hunting</strong> — antes de o disco ser removido. O lacre veio depois. Não há paradoxo, e a coluna “Origem” do Anexo I <span class="fls">fls. 197/198</span> registra o método de cada arquivo.</p>
+    <p>O que sobrevive, e não precisa de paradoxo nenhum: <strong>MSRoletas.exe e ROBO_Position.zip não estão no Anexo I</strong>, e o item 49 <span class="fls">fls. 211</span> diz que foram “coletados durante a investigação” — dos sites públicos descritos nos itens 41 a 45.</p>
+  </div>
+
+  <div class="note warn">
+    <span class="tag">Erros de citação a corrigir</span>
+    <p><strong>Ênio 1.5</strong> — a “contradição” entre coleta via Live Response e o Item 29 não existe. O Item 29 fala do download dos <em>logs do Compliance do MS365</em>, sistema distinto. Já retirado do roteiro do Felipe; retire também daqui.</p>
+    <p><strong>Guaraçay 3.2</strong> — o documento que nega a perícia é o <strong>Ofício nº 32/2023 – COGER/RFB</strong>, em <span class="fls">fls. 192</span>, não o Ofício nº 0.102/2023 em fls. 252 (esse apenas transmite a Nota nº 78).</p>
+    <p><strong>Guaraçay 6.1</strong> — a referência aos autos está <em>vazia</em> no documento. A transferência para a PGFN em 22/11/2022 está em <span class="fls">fls. 34</span> e na inicial <span class="fls">fls. 20</span>.</p>
+    <p><strong>Guaraçay 8.2</strong> — não afirme que ele “confessou que o processo ficou parado por 461 dias”. Ele escreveu que <em>a defesa</em> permaneceu inerte por 461 dias. Atribuir-lhe confissão que não fez convida à correção. Reformulei como pergunta sobre quais atos a Comissão praticou no período.</p>
+    <p><strong>Ênio 2.5</strong> — pedir à testemunha que enquadre “moralmente questionável” em alínea do art. 482 é pedir parecer jurídico. Será indeferida. Reformulei como pergunta de fato.</p>
+  </div>
+
+  <div class="note gold">
+    <span class="tag">O achado — vale mais que tudo</span>
+    <p>A pergunta 9.5 do Guaraçay estava certa e eu a subestimei. Confirmei o teor. O <strong>Ofício nº 004131/2023/CORRD, de 13/04/2023</strong>, assinado pela Corregedora Raquel de Carvalho Drummond de Sant'Ana, requer à RFB o compartilhamento dos documentos <em>oriundos da perícia efetuada</em> na estação, declarando expressamente a finalidade: <em>“adotar medida de investigação preliminar na busca da verdade dos fatos (materialidade)”</em> <span class="fls">fls. 187</span>.</p>
+    <p>Ou seja: <strong>a própria Corregedoria do SERPRO declarou, por escrito, que precisava da perícia para estabelecer a materialidade.</strong> A RFB respondeu que não existiam registros de perícia <span class="fls">fls. 192</span>. E a Comissão depois indeferiu a perícia requerida pela defesa classificando-a como desnecessária.</p>
+    <p>Essa contradição é documental, está inteira nos autos e não depende de nenhuma tese técnica. É o eixo do depoimento do Guaraçay e a razão de ele ser o último a depor.</p>
+  </div>
+
+  <div class="note gold">
+    <span class="tag">Segundo achado — a dosimetria</span>
+    <p>Também confirmado. O Relatório Final, item 6, invoca a <strong>Súmula 650 do STJ</strong> — que trata do art. 132 da <strong>Lei 8.112/90</strong>, regime estatutário — para “deixar de analisar as circunstâncias agravantes ou atenuantes da pena”. Alexandre é celetista.</p>
+    <p>E a própria Norma TR-011, item 4.4.9.3, determina que as circunstâncias atenuantes e agravantes <strong>devem</strong> ser consideradas. Duas das atenuantes listadas no item 4.4.9.3.1 se aplicam diretamente: “ausência de penalidade disciplinar anterior” e “prestação de bons serviços à administração pública”.</p>
+    <p>A Comissão dispensou a dosimetria obrigatória da própria norma invocando súmula de outro regime jurídico.</p>
+  </div>
+
+  <h3>Auditoria bloco a bloco</h3>
+  <div class="tbl-scroll">
+  <table class="tbl">
+    <thead><tr><th>Origem</th><th>Destino</th><th>Motivo</th></tr></thead>
+    <tbody>
+      <tr><td>Ênio — Bloco 1 (65 minutos)</td><td class="cut">Reconstruir</td><td>Aritmética e conteúdo errados. Vira Ê1–Ê4 com o intervalo real de seis semanas.</td></tr>
+      <tr><td>Ênio — 1.5 (Live Response × Item 29)</td><td class="cut">Eliminar</td><td>Contradição inexistente.</td></tr>
+      <tr><td>Ênio — 1.6 / 3.1 (Ofício 32/2023)</td><td class="keep">Manter</td><td>Correto e forte. Vira Ê5.</td></tr>
+      <tr><td>Ênio — 1.7 (hashes)</td><td class="keep">Manter</td><td>Vira Ê6.</td></tr>
+      <tr><td>Ênio — Bloco 2 (co-autoria do JdA)</td><td class="keep">Reduzir</td><td>2.1 e 2.2 viram Ê7. 2.5 (art. 482) sai: pede parecer.</td></tr>
+      <tr><td>Ênio — 2.7 a 2.10 (MEI da esposa)</td><td class="keep">Reduzir a duas</td><td>Excelente ponto de fato. Viram Ê8 e Ê9, sem pedir análise normativa.</td></tr>
+      <tr><td>Ênio — Bloco 3 (impossibilidade física)</td><td class="cut">Eliminar</td><td>Premissa falsa. O que sobra vira Ê10.</td></tr>
+      <tr><td>Ênio — Bloco 4 (prova técnica não exigida)</td><td class="keep">Manter</td><td>Vira Ê11 e Ê12. Amarra com Felipe.</td></tr>
+      <tr><td>Ênio — Blocos 5 e 6 (promoções, TAC)</td><td class="cut">Transferir</td><td>São matéria institucional do SERPRO e ele pode deflectir. Melhor com Guaraçay, que assinou a pena.</td></tr>
+      <tr><td>Guaraçay — Bloco 1 (substituição sem causa)</td><td class="keep">Reduzir a uma</td><td>Vira G1. Bom, mas não é onde está a força.</td></tr>
+      <tr><td>Guaraçay — Bloco 2 (461 dias, formalismo)</td><td class="keep">Manter</td><td>Muito forte. Vira G2–G5, com 8.2 reformulada.</td></tr>
+      <tr><td>Guaraçay — 9.5 a 9.10 (perícia necessária × desnecessária)</td><td class="keep">Promover a eixo</td><td>É o melhor argumento do caso. Vira G10–G13.</td></tr>
+      <tr><td>Guaraçay — Bloco 10 (Termo de Indiciação)</td><td class="keep">Manter</td><td>Vira G6–G8. A tese que ganha.</td></tr>
+      <tr><td>Guaraçay — Bloco 12 (Súmula 650)</td><td class="keep">Manter</td><td>Confirmado nos autos. Vira G14–G16.</td></tr>
+      <tr><td>Guaraçay — Bloco 6 (CES, COINT, sigilo)</td><td class="keep">Reduzir</td><td>Onze perguntas para um ponto. Viram G17 e G18.</td></tr>
+      <tr><td>Ambos — perguntas finais de 300 palavras</td><td class="cut">Reescrever</td><td>Nenhum juízo admite. Duas linhas cada.</td></tr>
+      <tr><td>Ambos — boxes “Para compreensão do Juízo”</td><td class="cut">Migrar</td><td>Não podem ser lidos em audiência. Vão para o memorial.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Regras de forma</h3>
+  <ul>
+    <li>Abertura: <em>“Excelência, requer-se seja indagado ao depoente:”</em></li>
+    <li>Um fato por pergunta. Sem preâmbulo, sem transcrição de trecho longo.</li>
+    <li>Nada de juízo de valor nem de enquadramento jurídico — testemunha depõe sobre fato.</li>
+    <li>Nunca confronte a testemunha com a contestação. O confronto é seu, no memorial.</li>
+    <li>Peça registro em ata de toda pergunta indeferida, com o texto transcrito.</li>
+  </ul>
+</section>
+
+<!-- ═══════════ P1 FELIPE ═══════════ -->
+<section class="pane" id="p1">
+  <div class="who">
+    <p class="nm">Felipe Mendes Moraes</p>
+    <p class="rl">Coordenador-Geral de Tecnologia e Segurança da Informação — RFB</p>
+    <dl>
+      <div><dt>Ordem</dt><dd>Primeiro a depor</dd></div>
+      <div><dt>Perguntas</dt><dd>14</dd></div>
+      <div><dt>Entrega</dt><dd>O acervo existe, tem hash, nunca foi juntado</dd></div>
+      <div><dt>Trava para</dt><dd>Ênio e Guaraçay</dd></div>
+    </dl>
+  </div>
+
+  <h2>Fixa os fatos técnicos que ninguém mais poderá negar</h2>
+  <p>Felipe depõe primeiro porque tudo que ele confirmar vira premissa para os outros dois. Depois que ele disser que os artefatos existem e não estão nos autos, nem Ênio nem Guaraçay conseguem dizer que a prova estava lá.</p>
+
+  <h4>Bloco A — O acervo</h4>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F1</span><span class="qt">O inventário</span></div>
+    <div class="qbody">O Anexo I da Nota COTEC/DISEG/RFB nº 78 lista os artefatos coletados, com o hash SHA-256 e a origem de cada um. Esse Anexo I é o registro oficial e completo do que a DISEG coletou em novembro de 2022?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 197/198</span> e <span class="fls">fls. 265/266</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> alicerce. Confirmação esperada e inofensiva.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">F2</span><span class="qt">Os cinco arquivos decisivos</span></div>
+    <div class="qbody">Entre os artefatos do Anexo I constam <span class="file">processos_alexandre.csv</span>, descrito como log de processos executados na estação; <span class="file">imageload_alexandre.csv</span>; os inventários <span class="file">Inventario_de_software_alexandre.csv</span> e <span class="file">software_evidence_alexandre.csv</span>; e o <span class="file">MDE_Investigation_Package</span>, descrito pelo próprio Anexo I como pacote que inclui o log de eventos de segurança. Esses arquivos registram quais programas estavam instalados na estação e quais foram efetivamente executados?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 197/198</span> e <span class="fls">fls. 265/266</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> se confirmar, a prova direta da execução existia. Se negar, contradiz a descrição que a própria DISEG redigiu na coluna do Anexo I.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">F3</span><span class="qt">A verificação que ninguém registrou</span></div>
+    <div class="qbody">A DISEG chegou a registrar, em algum documento, se o <span class="file">MSRoletas.exe</span> constava do inventário de software ou do log de processos executados da estação?</div>
+    <p class="qmeta"><b>Autos:</b> Nota nº 78 <span class="fls">fls. 255/266</span> — ausência de tal registro</p>
+    <p class="qwhy"><b>Por que funciona:</b> <b>a pergunta mais afiada do roteiro.</b> A Nota nº 78 não afirma em momento algum que o MSRoletas foi encontrado no inventário ou no log de processos. Se ele disser que não sabe, o responsável máximo pela área admite que a verificação decisiva não foi feita ou não foi documentada.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F4</span><span class="qt">A entrega</span></div>
+    <div class="qbody">O senhor pode indicar em qual folha destes autos se encontra o conteúdo bruto e legível de qualquer um desses cinco arquivos?</div>
+    <p class="qmeta"><b>Autos:</b> ausência de conteúdo bruto em todos os volumes</p>
+    <p class="qwhy"><b>Por que funciona:</b> verificável na hora. Silêncio de testemunha técnica diante de pergunta objetiva vale mais que argumento escrito.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F5</span><span class="qt">A truncagem</span></div>
+    <div class="qbody">Três desses arquivos aparecem no Anexo I com a expressão “limitado a 10k” no próprio nome. Isso significa que a consulta retornou apenas os dez mil primeiros registros e descartou o restante?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 197/198</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> o log de processos, base da acusação de execução, foi truncado por critério não documentado.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F6</span><span class="qt">Os executáveis fora do inventário</span></div>
+    <div class="qbody">Os arquivos <span class="file">MSRoletas.exe</span> e <span class="file">ROBO_Position.zip</span> constam do Anexo I entre os artefatos coletados da estação em novembro de 2022?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 197/198</span> (ausência) · <span class="fls">fls. 211</span> item 49 · <span class="fls">fls. 361/363</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> não constam, e o item 49 diz que foram “coletados durante a investigação”. Sem invocar impossibilidade física nenhuma.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F7</span><span class="qt">O pacote transmitido</span></div>
+    <div class="qbody">Os artefatos foram compactados em <span class="file">Artefatos.zip</span> e transmitidos à Corregedoria da RFB para encaminhamento ao SERPRO. Esse pacote continha o conteúdo integral dos arquivos, e não apenas a relação de nomes e hashes?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 192</span>, item 19</p>
+    <p class="qwhy"><b>Por que funciona:</b> não questione a legitimidade do link — é institucional. Se o pacote tinha o conteúdo, ele existiu em poder do SERPRO e mesmo assim não foi juntado. <b>Amarra com Ê11.</b></p>
+  </div>
+
+  <h4>Bloco B — Onde a máquina estava</h4>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">F8</span><span class="qt">O campo em branco</span></div>
+    <div class="qbody">Na tabela de identificação do dispositivo elaborada pela DISEG, o campo “Endereço IP na RFB” foi preenchido com a palavra “Teletrabalho”. O senhor pode esclarecer por que esse campo não recebeu um endereço IP da rede da Receita Federal?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 193</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> não há resposta boa. Qualquer explicação confirma que a estação não operava dentro da rede institucional.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F9</span><span class="qt">A titularidade do IP</span></div>
+    <div class="qbody">O endereço <span class="file">191.54.14.146</span> pertence a bloco de endereçamento da Receita Federal, do SERPRO, ou a operadora comercial de acesso à internet?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 182</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> se comercial, cai a exposição da rede institucional. Se não souber, o Coordenador-Geral de Segurança admite não ter verificado o único dado concreto da acusação.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F10</span><span class="qt">A padronização</span></div>
+    <div class="qbody">As estações padronizadas da RFB, no perfil da <span class="file">RF0610400023021</span>, são entregues com unidade de disco identificada como “E:” e permitem que o usuário instale editores de vídeo comerciais?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 207/210</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> dito pelo responsável técnico da RFB, converte os frames em prova de que a máquina retratada não era a institucional.</p>
+  </div>
+
+  <h4>Bloco C — Tentativa, consumação e perícia</h4>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F11</span><span class="qt">A palavra escolhida</span></div>
+    <div class="qbody">No relato encaminhado ao SERPRO, o senhor escreveu que “infere-se que o dispositivo RFB estaria sendo utilizado como servidor de testes ou de desenvolvimento”. O senhor confirma essa formulação e que ela expressa uma dedução a partir de indícios, e não uma constatação direta?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 182</span> item 4</p>
+    <p class="qwhy"><b>Por que funciona:</b> é a palavra dele. <b>Não mencione a contestação.</b> O confronto com o § 213 é seu, no memorial.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F12</span><span class="qt">O ataque consumado</span></div>
+    <div class="qbody">Houve, em novembro de 2022, algum acesso não autorizado efetivamente consumado aos sistemas internos da Receita Federal a partir dessa estação? Existe registro técnico desse acesso?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 182/183</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> o texto dele é condicional — “caso alguma dessas tentativas tivesse obtido êxito”. A resposta será não.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">F13</span><span class="qt">A perícia</span></div>
+    <div class="qbody">Foi realizada, em algum momento, perícia técnica forense na estação <span class="file">RF0610400023021</span> ou no disco dela removido, de série <span class="file">WL1P9Y08</span>?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 192</span> — Ofício nº 32/2023 – COGER/RFB</p>
+    <p class="qwhy"><b>Por que funciona:</b> a resposta é não, e o ofício do Corregedor da RFB já diz isso por escrito. <b>Trava Ê5 e G10.</b></p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">F14</span><span class="qt">Encerramento</span></div>
+    <div class="qbody">Existe, em algum documento juntado a estes autos em forma bruta e verificável, registro de que o Sr. Alexandre executou pessoalmente qualquer software irregular nessa estação em novembro de 2022?</div>
+    <p class="qmeta"><b>Autos:</b> encerra os blocos A a C</p>
+    <p class="qwhy"><b>Por que funciona:</b> depois de treze perguntas, a resposta o Juízo já sabe. Faça e sente-se.</p>
+  </div>
+</section>
+
+<!-- ═══════════ P2 ÊNIO ═══════════ -->
+<section class="pane" id="p2">
+  <div class="who">
+    <p class="nm">Ênio Onodera</p>
+    <p class="rl">Gerente da Divisão de Investigação Correcional — Corregedoria do SERPRO</p>
+    <dl>
+      <div><dt>Ordem</dt><dd>Segundo a depor</dd></div>
+      <div><dt>Perguntas</dt><dd>12</dd></div>
+      <div><dt>Entrega</dt><dd>Concluiu materialidade sem a perícia que dizia precisar</dd></div>
+      <div><dt>Herda de</dt><dd>F7 e F13</dd></div>
+    </dl>
+  </div>
+
+  <h2>A virada de julho a dezembro de 2023</h2>
+  <p>A cronologia verdadeira é melhor que a dos “65 minutos”, e é esta: em <strong>13/04/2023</strong> a Corregedoria pede à RFB os documentos da perícia, dizendo que precisa deles para a materialidade. Em <strong>31/07/2023</strong> Ênio anuncia que encerrará a investigação por falta de resposta. Em <strong>11/09/2023</strong> chega a resposta — dizendo que <em>não existem registros de perícia</em>. Em <strong>08/12/2023</strong> ele assina o Juízo de Admissibilidade concluindo que há materialidade.</p>
+
+  <blockquote>
+    <p>requer o compartilhamento das informações e documentos oriundos da perícia efetuada na estação de trabalho rf0610400023021 […] na intenção de adotar medida de investigação preliminar na busca da verdade dos fatos (materialidade).</p>
+    <cite>Ofício nº 004131/2023/CORRD, 13/04/2023 — <span class="fls">fls. 187</span></cite>
+  </blockquote>
+
+  <h4>Bloco A — A cronologia</h4>
+
+  <div class="q">
+    <div class="qh"><span class="qn">Ê1</span><span class="qt">O que foi pedido</span></div>
+    <div class="qbody">Em 13/04/2023 a Corregedoria do SERPRO expediu o Ofício nº 004131/2023/CORRD à Receita Federal, requerendo o compartilhamento dos documentos oriundos da perícia efetuada na estação, e declarando que isso era necessário para a busca da verdade dos fatos quanto à materialidade. O senhor confirma esse pedido e essa finalidade?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 186/187</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> <b>abre o depoimento com o documento mais forte do caso.</b> A própria Corregedoria declarou que precisava da perícia para a materialidade.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">Ê2</span><span class="qt">O anúncio de encerramento</span></div>
+    <div class="qbody">Em 31/07/2023, às 12h04, o senhor escreveu ao Sr. Felipe Mendes Moraes informando que até aquela data não havia resposta ao solicitado e que, isto posto, prosseguiria com o encerramento da investigação. O senhor confirma esse e-mail?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 190/191</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> confirmação inevitável — o e-mail está reproduzido nos autos. <b>Não mencione “65 minutos”.</b></p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">Ê3</span><span class="qt">O que faltava</span></div>
+    <div class="qbody">Naquele momento, o que faltava para concluir a investigação eram justamente os documentos da perícia pedidos em abril?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 187</span> e <span class="fls">fls. 190/191</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> liga o pedido ao anúncio de encerramento. Qualquer resposta serve: se sim, confirma; se não, terá de dizer o que mais faltava.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">Ê4</span><span class="qt">A resposta que chegou</span></div>
+    <div class="qbody">Em 11/09/2023 a Corregedoria recebeu o Ofício nº 32/2023 – COGER/RFB, de 17/08/2023, informando que não foram encontrados registros de perícia realizada nessa estação de trabalho. O senhor tomou conhecimento dessa resposta?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 192</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> <b>o eixo do depoimento.</b> Ele pediu a perícia para provar materialidade; foi informado de que ela não existia; e concluiu pela materialidade mesmo assim.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">Ê5</span><span class="qt">A conclusão</span></div>
+    <div class="qbody">Em 08/12/2023 o senhor subscreveu o Juízo de Admissibilidade nº 057/2022, concluindo pela existência de elementos de autoria e materialidade. Que elemento substituiu, nessa conclusão, a perícia que o senhor havia declarado necessária em abril?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 224/225</span> · <span class="fls">fls. 187</span> · <span class="fls">fls. 192</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> pergunta aberta, deliberadamente. Não há resposta que não seja “as informações da DISEG e consultas à internet” — e o item 31 do próprio relatório confirma isso.</p>
+  </div>
+
+  <h4>Bloco B — O que foi verificado</h4>
+
+  <div class="q">
+    <div class="qh"><span class="qn">Ê6</span><span class="qt">Os hashes</span></div>
+    <div class="qbody">Antes de concluir pela materialidade, a Corregedoria conferiu se os hashes dos arquivos recebidos correspondiam aos listados no Anexo I da Nota Técnica nº 78?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 197/198</span> e <span class="fls">fls. 265/266</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> não há nos autos nenhum termo de conferência de integridade.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">Ê7</span><span class="qt">O conteúdo dos artefatos</span></div>
+    <div class="qbody">A Corregedoria chegou a ter acesso ao conteúdo dos logs de processos executados e dos inventários de software da estação, listados no Anexo I?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 197/198</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> <b>trava com F7.</b> Felipe já terá dito se o pacote continha o conteúdo. Se Ênio disser que não recebeu, alguém está errado; se disser que recebeu, terá de explicar por que não juntou.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">Ê8</span><span class="qt">O vídeo de fevereiro</span></div>
+    <div class="qbody">O vídeo utilizado como elemento no Juízo de Admissibilidade foi gravado em 16/02/2022, às 18h49, e obtido por download de site público durante a investigação. A Corregedoria verificou a data e a origem desse vídeo antes de utilizá-lo?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 206</span> e <span class="fls">fls. 208/209</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> oito meses antes do incidente, fora do expediente, de fonte pública. Três incompatibilidades num só elemento.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">Ê9</span><span class="qt">A origem dos executáveis</span></div>
+    <div class="qbody">O item 49 do relatório diz que <span class="file">MSRoletas.exe</span> e <span class="file">ROBO_Position.zip</span> foram “coletados durante a investigação”. A Corregedoria registrou em que data, por qual agente e de qual fonte esses arquivos foram obtidos?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 211</span> item 49 · <span class="fls">fls. 209</span> item 45</p>
+    <p class="qwhy"><b>Por que funciona:</b> o item 45 já diz que o ROBO_Position veio do site público. Sem invocar lacre nem impossibilidade física.</p>
+  </div>
+
+  <h4>Bloco C — Os fundamentos do Juízo de Admissibilidade</h4>
+
+  <div class="q">
+    <div class="qh"><span class="qn">Ê10</span><span class="qt">A conduta “moralmente questionável”</span></div>
+    <div class="qbody">O item 66, alínea “a”, do Juízo de Admissibilidade que o senhor subscreveu qualifica a conduta como moralmente questionável. Que elemento probatório dos autos embasou essa qualificação?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 222/223</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> pergunta de fato, não de direito. <b>Não peça o enquadramento no art. 482</b> — seria indeferida. A atipicidade você argumenta no memorial.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">Ê11</span><span class="qt">O MEI da esposa</span></div>
+    <div class="qbody">O item 66, alínea “c”, fundamenta o conflito de interesses na identificação do CPF da esposa do Reclamante no registro de um MEI. A senhora Leila Aparecida Alves Teixeira é empregada do SERPRO ou possui qualquer vínculo com a empresa?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 223</span> item 66(c)</p>
+    <p class="qwhy"><b>Por que funciona:</b> a resposta é não. Pergunta curta e factual.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">Ê12</span><span class="qt">Encerramento</span></div>
+    <div class="qbody">Entre 21/11/2022, data da denúncia, e 06/02/2024, data da instauração do PAD, que diligência ocupou esse intervalo de um ano e quase três meses?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 8/9</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> se responder “aguardávamos a RFB”, o excesso é da Administração. Se responder outra coisa, não há justificativa para a demora. Alimenta decadência procedimental.</p>
+  </div>
+</section>
+
+<!-- ═══════════ P3 GUARAÇAY ═══════════ -->
+<section class="pane" id="p3">
+  <div class="who">
+    <p class="nm">Guaraçay Augusto Ribeiro da Silva</p>
+    <p class="rl">Coordenador da Comissão do PAD — 14/07/2025 a 01/10/2025</p>
+    <dl>
+      <div><dt>Ordem</dt><dd>Último a depor</dd></div>
+      <div><dt>Perguntas</dt><dd>18</dd></div>
+      <div><dt>Entrega</dt><dd>Indeferiu a perícia que o SERPRO dissera necessária</dd></div>
+      <div><dt>Herda de</dt><dd>F13, Ê1, Ê4, Ê5</dd></div>
+    </dl>
+  </div>
+
+  <h2>Depõe por último porque o terreno já está firme</h2>
+  <p>Quando Guaraçay sentar, o Juízo já terá ouvido da RFB que não houve perícia, e do SERPRO que a perícia era necessária para a materialidade. Só então se pergunta a ele por que a indeferiu como desnecessária.</p>
+
+  <h4>Bloco A — A herança e a supressão</h4>
+
+  <div class="q">
+    <div class="qh"><span class="qn">G1</span><span class="qt">A substituição</span></div>
+    <div class="qbody">A Decisão CORRD-GR-031/2025 substituiu o coordenador anterior. O senhor pode indicar em qual documento consta a causa formal dessa substituição?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 629/630</span> · TR-011 item 4.2.3.3</p>
+    <p class="qwhy"><b>Por que funciona:</b> ponto de abertura, de baixo risco. Não é onde está a força.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">G2</span><span class="qt">A admissão</span></div>
+    <div class="qbody">No e-mail de 21/08/2025 o senhor escreveu que razão assistia à defesa quanto à ausência de juntada do documento. O senhor confirma esse trecho?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 928</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> fixa a admissão antes de explorar a contradição.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G3</span><span class="qt">Os 461 dias</span></div>
+    <div class="qbody">No mesmo e-mail, o senhor consignou que a defesa permaneceu inerte por 461 dias. Nesse período, o link de acesso do investigado e de seus procuradores aos autos do PAD estava ativo?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 13/14</span> — link expirado até 11/08/2025 · TR-011 item 4.4.6.5</p>
+    <p class="qwhy"><b>Por que funciona:</b> <b>reformulada.</b> Não afirme que ele confessou paralisia da Comissão — ele disse o contrário. Pergunte pelo link: estava expirado. A Comissão atribuiu à defesa uma inércia que ela própria causou.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">G4</span><span class="qt">O que a Comissão fez</span></div>
+    <div class="qbody">Durante esses mesmos 461 dias, que atos de instrução a Comissão praticou?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 926/928</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> pergunta aberta e neutra. Deixa que ele mesmo revele a ausência de atos, sem que você lhe atribua confissão.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G5</span><span class="qt">O formalismo seletivo</span></div>
+    <div class="qbody">O senhor aplicou o princípio do formalismo moderado para juntar tardiamente a manifestação de 22/05/2024. Esse mesmo princípio foi aplicado para apreciar os requerimentos de prova contidos nela?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 928</span> e <span class="fls">fls. 660/669</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> o princípio serviu para sanar o erro da Comissão e não para reparar o prejuízo da defesa.</p>
+  </div>
+
+  <h4>Bloco B — O Termo de Indiciação</h4>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G6</span><span class="qt">Os fatos imputados</span></div>
+    <div class="qbody">O Termo de Indiciação que o senhor assinou em 15/08/2025 imputa dois fatos: possível utilização de equipamento funcional com finalidade particular e potencial conflito de interesses. Foram esses os únicos fatos indiciados?</div>
+    <p class="qmeta"><b>Autos:</b> Termo de Indiciação, p. 489/490 do PAD · <span class="fls">fls. 715</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> fixa o objeto e deixa as palavras “possível” e “potencial” em ata.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G7</span><span class="qt">A lista de provas</span></div>
+    <div class="qbody">No item III do Termo, os elementos comprobatórios arrolados são cinco: a declaração do acusado, o juízo de admissibilidade, a Norma GP 077, a declaração de não exercício de atividade e a consulta ao SeCI. Algum outro documento foi arrolado como elemento comprobatório?</div>
+    <p class="qmeta"><b>Autos:</b> Termo de Indiciação, item III</p>
+    <p class="qwhy"><b>Por que funciona:</b> a resposta é não. Nenhum log, nenhuma Nota nº 78, nenhum artefato. <b>Está escrito e assinado por ele.</b></p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G8</span><span class="qt">O que ficou de fora</span></div>
+    <div class="qbody">No item 5.2 do Relatório Final o senhor registrou que os pontos relativos ao incidente de segurança não constaram do Termo de Indiciação e por isso não seriam apreciados, por extrapolarem seus limites. O senhor confirma esse registro?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 939</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> confirmado em ata, permite ao memorial confrontá-lo com os §§ 86 a 111 da contestação. <b>Sem submeter a contestação à testemunha.</b></p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">G9</span><span class="qt">O objeto da confissão</span></div>
+    <div class="qbody">O item II do Termo registra que a autoria foi confessada em depoimento. O objeto dessa confissão é a realização de atividade privada sem autorização expressa — e não a instalação de software na estação institucional?</div>
+    <p class="qmeta"><b>Autos:</b> Termo de Indiciação, item II</p>
+    <p class="qwhy"><b>Por que funciona:</b> delimita o alcance da confissão pelas palavras do próprio Termo.</p>
+  </div>
+
+  <h4>Bloco C — A perícia: necessária em 2023, desnecessária em 2025</h4>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G10</span><span class="qt">A declaração do próprio SERPRO</span></div>
+    <div class="qbody">No Ofício nº 004131/2023/CORRD, de 13/04/2023, a Corregedoria do SERPRO requereu à Receita Federal os documentos oriundos da perícia da estação, declarando que precisava deles para a busca da verdade dos fatos quanto à materialidade. O senhor tinha conhecimento desse ofício?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 186/187</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> <b>a melhor pergunta de todo o caso.</b> Qualquer resposta serve. Se conhecia, indeferiu como desnecessária o que a empresa dissera necessário. Se não conhecia, indeferiu sem examinar peça essencial dos autos.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G11</span><span class="qt">O indeferimento</span></div>
+    <div class="qbody">A Comissão indeferiu o requerimento de perícia da defesa classificando-a como desnecessária. Que fundamento técnico levou a Comissão a classificar como desnecessária a mesma prova que a Corregedoria havia declarado necessária?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 947</span> · <span class="fls">fls. 187</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> contradição documental fechada. Não há terceira via.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">G12</span><span class="qt">A decisão fundamentada</span></div>
+    <div class="qbody">O item 4.4.6.12 da Norma TR-011 elenca as hipóteses taxativas em que a prova pode ser recusada. Foi proferida decisão formal indicando em qual dessas hipóteses o requerimento se enquadrava?</div>
+    <p class="qmeta"><b>Autos:</b> TR-011 item 4.4.6.12 <span class="fls">fls. 112</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> nulidade pelo regulamento da própria ré, não por tese da defesa.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G13</span><span class="qt">A guia que nunca existiu</span></div>
+    <div class="qbody">O Relatório Final também registra que o acusado teria indicado o não pagamento ou o pagamento de metade dos honorários da perícia. A Comissão chegou a calcular o valor desses honorários, emitir guia de recolhimento e notificar formalmente o investigado para pagamento em prazo determinado?</div>
+    <p class="qmeta"><b>Autos:</b> Relatório Final item 5.8 <span class="fls">fls. 938</span> · TR-011 item 4.4.6.4</p>
+    <p class="qwhy"><b>Por que funciona:</b> <b>excelente e verificado.</b> A norma de fato exige custeio pelo requerente — não negue isso. Pergunte pela guia: não existe nos autos. E note a incompatibilidade: se era desnecessária, por que condicioná-la a pagamento?</p>
+  </div>
+
+  <h4>Bloco D — A dosimetria dispensada</h4>
+
+  <div class="q">
+    <div class="qh"><span class="qn">G14</span><span class="qt">O regime jurídico</span></div>
+    <div class="qbody">O item 6 do Relatório Final invoca a Súmula nº 650 do STJ, que trata do art. 132 da Lei nº 8.112/1990, para deixar de analisar as circunstâncias agravantes ou atenuantes. O Sr. Alexandre era empregado celetista ou servidor estatutário regido pela Lei 8.112/90?</div>
+    <p class="qmeta"><b>Autos:</b> Relatório Final item 6.1/6.2 <span class="fls">fls. 940</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> era celetista, admitido por concurso sob a CLT. Pergunta de fato, não de direito.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G15</span><span class="qt">A norma interna</span></div>
+    <div class="qbody">O item 4.4.9.3 da Norma TR-011 determina que, na apuração que resultar em penalidade disciplinar, devem ser consideradas as circunstâncias atenuantes e agravantes. Essa análise foi realizada neste PAD?</div>
+    <p class="qmeta"><b>Autos:</b> TR-011 item 4.4.9.3 · Relatório Final <span class="fls">fls. 940</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> não foi — o Relatório diz expressamente “deixa-se de analisar”. A norma usa “devem”. Dispensa da dosimetria obrigatória com base em súmula de outro regime.</p>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="qn">G16</span><span class="qt">As atenuantes existentes</span></div>
+    <div class="qbody">O item 4.4.9.3.1 lista como atenuantes a ausência de penalidade disciplinar anterior e a prestação de bons serviços à administração pública. O Sr. Alexandre possuía alguma penalidade disciplinar anterior em seus dezesseis anos de contrato?</div>
+    <p class="qmeta"><b>Autos:</b> TR-011 item 4.4.9.3.1</p>
+    <p class="qwhy"><b>Por que funciona:</b> não possuía. Duas atenuantes aplicáveis, nenhuma considerada.</p>
+  </div>
+
+  <h4>Bloco E — A conduta da empresa</h4>
+
+  <div class="q">
+    <div class="qh"><span class="qn">G17</span><span class="qt">As promoções</span></div>
+    <div class="qbody">Durante a tramitação do PAD o Reclamante foi promovido duas vezes: por tempo de serviço em agosto de 2024 e por mérito em abril de 2025, com período avaliativo de julho de 2024 a fevereiro de 2025. A Comissão teve ciência dessas promoções?</div>
+    <p class="qmeta"><b>Autos:</b> editais e atos de concessão · <span class="fls">fls. 809/812</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> qualquer resposta serve. Se teve ciência, a empresa premiou quem acusava de improbidade. Se não teve, a Comissão decidiu sem conhecer fato relevante da vida funcional.</p>
+  </div>
+
+  <div class="q star">
+    <div class="qh"><span class="qn">G18</span><span class="qt">Encerramento</span></div>
+    <div class="qbody">A Comissão de Ética do SERPRO foi acionada pela Decisão da Corregedoria de 08/12/2023 para verificação de conduta antiética. Ela emitiu alguma censura ética em relação ao Reclamante?</div>
+    <p class="qmeta"><b>Autos:</b> <span class="fls">fls. 225/226</span> alínea “c” · <span class="fls">fls. 398</span></p>
+    <p class="qwhy"><b>Por que funciona:</b> não emitiu. O órgão de controle ético da empresa foi formalmente acionado, examinou e não viu motivo — enquanto a Comissão concluía por falta funcional grave. Termine aqui.</p>
+  </div>
+</section>
+
+<!-- ═══════════ P4 CRUZAMENTOS ═══════════ -->
+<section class="pane" id="p4">
+  <h2>Como as três respostas se travam</h2>
+  <p>O risco de ouvir três testemunhas é cada uma empurrar para a seguinte: Felipe dizendo que entregou ao SERPRO, Ênio dizendo que a RFB não mandou, Guaraçay dizendo que não estava no objeto. A sequência abaixo fecha as três saídas.</p>
+
+  <div class="chain">
+    <div class="lk"><div class="who2">Felipe<br>F13</div><div class="txt">Não houve perícia na estação nem no disco. <b>→ Fecha a saída “a perícia existia”.</b></div></div>
+    <div class="lk"><div class="who2">Ênio<br>Ê1</div><div class="txt">A Corregedoria pediu a perícia porque precisava dela para a materialidade. <b>→ Fecha a saída “a perícia era irrelevante”.</b></div></div>
+    <div class="lk"><div class="who2">Ênio<br>Ê4 · Ê5</div><div class="txt">Soube que a perícia não existia e concluiu pela materialidade assim mesmo. <b>→ Fecha a saída “havia outra prova”.</b></div></div>
+    <div class="lk"><div class="who2">Guaraçay<br>G10 · G11</div><div class="txt">Indeferiu como desnecessária a prova que a empresa declarara necessária. <b>→ Não sobra saída.</b></div></div>
+  </div>
+
+  <h3>Matriz de travas</h3>
+  <div class="tbl-scroll">
+  <table class="tbl">
+    <thead><tr><th>Se a testemunha tentar dizer…</th><th>Já estará impedida por</th></tr></thead>
+    <tbody>
+      <tr><td>“Os artefatos foram entregues ao SERPRO”<span style="color:var(--ink-3)"> — Felipe</span></td><td><b>Ê7.</b> Ênio dirá se a Corregedoria teve acesso ao conteúdo. Se sim, o SERPRO tinha a prova e não juntou; se não, contradiz Felipe.</td></tr>
+      <tr><td>“A RFB nunca nos mandou o material”<span style="color:var(--ink-3)"> — Ênio</span></td><td><b>F7.</b> Felipe já terá dito se o <span class="file">Artefatos.zip</span> continha o conteúdo integral.</td></tr>
+      <tr><td>“A perícia era desnecessária”<span style="color:var(--ink-3)"> — Guaraçay</span></td><td><b>Ê1.</b> A própria Corregedoria escreveu que precisava dela para a materialidade <span class="fls">fls. 187</span>.</td></tr>
+      <tr><td>“O incidente de segurança fundamenta a pena”<span style="color:var(--ink-3)"> — Guaraçay</span></td><td><b>G7 e G8.</b> O Termo não arrola prova técnica e o item 5.2 exclui o incidente do objeto.</td></tr>
+      <tr><td>“Havia materialidade técnica”<span style="color:var(--ink-3)"> — qualquer um</span></td><td><b>F3, F4 e F13.</b> A verificação decisiva não foi documentada, o conteúdo não está nos autos, e não houve perícia.</td></tr>
+      <tr><td>“A defesa é que ficou inerte”<span style="color:var(--ink-3)"> — Guaraçay</span></td><td><b>G3.</b> O link de acesso estava expirado no período inteiro.</td></tr>
+      <tr><td>“A pena era vinculada, sem margem”<span style="color:var(--ink-3)"> — Guaraçay</span></td><td><b>G14 a G16.</b> Súmula de regime estatutário aplicada a celetista, contra o “devem” do item 4.4.9.3 da própria TR-011.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Antes da audiência</h3>
+  <p>A inquirição colhe a confirmação; o requerimento transforma em consequência. Protocole antes, para que as respostas caiam sobre pedidos já pendentes de apreciação.</p>
+  <ol>
+    <li>Exibição, em forma bruta e integral, dos cinco artefatos do Anexo I identificados em F2, com conferência dos hashes SHA-256, sob as cominações do art. 400 do CPC.</li>
+    <li>Exibição do <span class="file">informações de rede alexandre.csv</span> e das versões não truncadas de <span class="file">conexoes</span>, <span class="file">processos</span> e <span class="file">imageload</span>.</li>
+    <li>Perícia judicial sobre o disco <span class="file">WL1P9Y08</span>, com pedido subsidiário expresso: se estiver degradado ou sem custódia idônea, que o Juízo consigne que a impossibilidade decorre de conduta da ré.</li>
+    <li>Intimação das três testemunhas nos endereços funcionais, com antecedência — nenhuma reside em Juiz de Fora.</li>
+  </ol>
+
+  <div class="note key">
+    <span class="tag">Uma observação sobre condução</span>
+    <p>Não comemore resposta favorável e não preencha silêncio. Se o Juízo indeferir alguma pergunta, peça registro em ata com o texto transcrito: cada indeferimento sobre matéria já negada no PAD reforça a tese de que a prova vem sendo obstada.</p>
+    <p>E resista à tentação de nomear “fraude”. Depois de F13, Ê5 e G11 constarem da ata, a conclusão se forma sozinha — e vale mais formada pelo juiz do que pedida pelo advogado.</p>
+  </div>
+</section>
+
+<footer>
+  Documento de trabalho, elaborado a partir da leitura integral dos autos (2.597 páginas) e da conferência das minutas Perguntas_Felipe_v4, Perguntas_Enio_v2 e Perguntas_Guaracy_v2.<br>
+  Não constitui parecer jurídico; destina-se a subsidiar os advogados constituídos.<br>
+  Processo nº 0011652-20.2025.5.03.0037 · 3ª Vara do Trabalho de Juiz de Fora · TRT-3
+</footer>
+
+</div>
+<script>
+(function(){
+  var b=[].slice.call(document.querySelectorAll('#tabs button')),p=[].slice.call(document.querySelectorAll('.pane'));
+  b.forEach(function(x){x.addEventListener('click',function(){
+    b.forEach(function(y){y.classList.remove('on')});p.forEach(function(y){y.classList.remove('on')});
+    x.classList.add('on');var t=document.getElementById(x.dataset.p);if(t)t.classList.add('on');
+    window.scrollTo({top:0,behavior:'smooth'});});});
+})();
+</script>
+</body>
+</html>
