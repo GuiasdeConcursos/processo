@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Análise Técnico-Jurídica — Processo nº 0011652-20.2025.5.03.0037</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F8FA;
+  --paper-2:#FFFFFF;
+  --ink:#141E29;
+  --ink-2:#4C5A68;
+  --ink-3:#75828E;
+  --rule:#D2D9E1;
+  --oxide:#A02C24;
+  --oxide-bg:#FBEFEE;
+  --amber:#7E6212;
+  --amber-bg:#FBF4E2;
+  --seal:#1C4A58;
+  --seal-bg:#E8F0F2;
+
+  --display:"Archivo",system-ui,sans-serif;
+  --body:"Newsreader",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+
+  --measure:70ch;
+  --rail:150px;
+  --gap:44px;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17.5px;
+  line-height:1.62;
+  font-optical-sizing:auto;
+}
+
+/* ---------- progress rule ---------- */
+#progress{
+  position:fixed;top:0;left:0;height:2px;width:0%;
+  background:var(--oxide);z-index:100;
+}
+
+/* ---------- shell ---------- */
+.wrap{
+  max-width:calc(var(--rail) + var(--gap) + var(--measure));
+  margin:0 auto;
+  padding:0 28px 120px;
+}
+.row{
+  display:grid;
+  grid-template-columns:var(--rail) var(--measure);
+  column-gap:var(--gap);
+  align-items:start;
+}
+.rail{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  padding-top:.55em;
+  line-height:1.5;
+}
+.col{min-width:0}
+
+@media (max-width:900px){
+  .wrap{max-width:100%}
+  .row{grid-template-columns:1fr}
+  .rail{
+    padding-top:0;margin-bottom:10px;
+    border-left:2px solid var(--rule);padding-left:10px;
+  }
+  :root{--measure:100%}
+}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:1.5px solid var(--ink);
+  padding:64px 0 26px;
+  margin-bottom:48px;
+}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--oxide);
+  margin:0 0 20px;
+}
+.masthead h1{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(30px,5.2vw,50px);
+  line-height:1.04;
+  letter-spacing:-.021em;
+  margin:0 0 6px;
+}
+.masthead .proc{
+  font-family:var(--mono);
+  font-size:clamp(15px,2.6vw,21px);
+  font-weight:500;
+  color:var(--oxide);
+  letter-spacing:-.01em;
+  margin:0 0 30px;
+}
+.facts{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(178px,1fr));
+  gap:20px 26px;
+  border-top:1px solid var(--rule);
+  padding-top:22px;
+}
+.fact dt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin:0 0 5px;
+}
+.fact dd{margin:0;font-size:15.5px;line-height:1.42}
+
+/* ---------- section headings ---------- */
+h2{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:clamp(23px,3.4vw,31px);
+  line-height:1.16;
+  letter-spacing:-.017em;
+  margin:0 0 18px;
+  padding-top:4px;
+}
+h3{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:18.5px;
+  letter-spacing:-.008em;
+  margin:38px 0 12px;
+}
+h4{
+  font-family:var(--mono);
+  font-weight:600;
+  font-size:12px;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+  margin:30px 0 10px;
+}
+section{
+  border-top:1px solid var(--rule);
+  padding:44px 0 8px;
+}
+section:first-of-type{border-top:none}
+
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+strong{font-weight:600}
+em{font-style:italic}
+a{color:var(--seal)}
+
+ul,ol{margin:0 0 1.15em;padding-left:1.25em}
+li{margin-bottom:.5em}
+li::marker{color:var(--ink-3)}
+
+/* ---------- record pointers ---------- */
+.fls{
+  font-family:var(--mono);
+  font-size:.83em;
+  font-weight:500;
+  color:var(--seal);
+  background:var(--seal-bg);
+  padding:.1em .38em;
+  border-radius:2px;
+  white-space:nowrap;
+}
+.file{
+  font-family:var(--mono);
+  font-size:.85em;
+  background:#EAEEF2;
+  padding:.1em .34em;
+  border-radius:2px;
+  word-break:break-all;
+}
+
+/* ---------- quotes from the record ---------- */
+blockquote{
+  margin:24px 0;
+  padding:16px 20px;
+  background:var(--paper-2);
+  border-left:3px solid var(--ink);
+  font-size:16.5px;
+  line-height:1.55;
+}
+blockquote p{margin:0 0 .7em}
+blockquote p:last-child{margin:0}
+blockquote cite{
+  display:block;margin-top:10px;
+  font-family:var(--mono);font-style:normal;
+  font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+}
+blockquote.adverse{border-left-color:var(--oxide);background:var(--oxide-bg)}
+
+/* ---------- callouts ---------- */
+.note{
+  margin:26px 0;padding:18px 20px;
+  border:1px solid var(--rule);
+  border-left:3px solid var(--seal);
+  background:var(--paper-2);
+  font-size:16.5px;
+}
+.note .tag{
+  display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--seal);margin-bottom:8px;
+}
+.note.warn{border-left-color:var(--amber);background:var(--amber-bg)}
+.note.warn .tag{color:var(--amber)}
+.note.key{border-left-color:var(--oxide);background:var(--oxide-bg)}
+.note.key .tag{color:var(--oxide)}
+
+/* ---------- SIGNATURE: the confrontation ---------- */
+.confronto{
+  margin:34px 0 8px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+}
+.stage{background:var(--paper-2);padding:20px 18px 22px;display:flex;flex-direction:column}
+.stage .no{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  color:var(--ink-3);margin-bottom:10px;
+}
+.stage h5{
+  font-family:var(--display);font-weight:600;font-size:15px;line-height:1.25;
+  margin:0 0 4px;letter-spacing:-.005em;
+}
+.stage .date{
+  font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-bottom:14px;
+}
+.stage .charge{font-size:15px;line-height:1.5;margin:0 0 16px}
+.stage .evid{
+  margin-top:auto;border-top:1px solid var(--rule);padding-top:12px;
+  font-family:var(--mono);font-size:11.5px;line-height:1.75;color:var(--ink-2);
+  list-style:none;padding-left:0;
+}
+.stage .evid li{margin:0;display:flex;gap:7px;align-items:baseline}
+.stage .evid .mk{color:var(--seal);font-weight:600}
+.stage .evid .out{color:var(--oxide);font-weight:600}
+.stage .evid li.gone{color:var(--oxide);text-decoration:line-through;text-decoration-thickness:1px}
+.stage.narrow{background:#FCFDFD}
+.stage.final{background:var(--oxide-bg)}
+.confronto-cap{
+  font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  color:var(--ink-3);margin-top:12px;line-height:1.6;
+}
+@media (max-width:760px){.confronto{grid-template-columns:1fr}}
+
+/* ---------- tables ---------- */
+.tbl{width:100%;border-collapse:collapse;margin:24px 0;font-size:15.5px}
+.tbl th{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);text-align:left;font-weight:600;
+  padding:0 12px 9px 0;border-bottom:1.5px solid var(--ink);
+}
+.tbl td{padding:12px 12px 12px 0;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.45}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td.n{font-family:var(--mono);font-size:13px;color:var(--ink-3);width:34px;padding-right:8px}
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* ---------- ordered strategy list ---------- */
+.steps{list-style:none;padding:0;margin:22px 0;counter-reset:s}
+.steps li{
+  counter-increment:s;position:relative;padding-left:38px;margin-bottom:16px;
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:0;top:.16em;
+  font-family:var(--mono);font-size:12px;font-weight:600;color:var(--paper-2);
+  background:var(--ink);width:22px;height:22px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ---------- synthesis ---------- */
+.synth{list-style:none;padding:0;margin:22px 0;counter-reset:y}
+.synth li{
+  counter-increment:y;display:grid;grid-template-columns:34px 1fr;gap:14px;
+  padding:16px 0;border-bottom:1px solid var(--rule);
+}
+.synth li:last-child{border-bottom:none}
+.synth li::before{
+  content:counter(y,decimal-leading-zero);
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--oxide);padding-top:.15em;
+}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1.5px solid var(--ink);margin-top:60px;padding-top:22px;
+  font-family:var(--mono);font-size:11.5px;line-height:1.75;color:var(--ink-3);
+}
+
+/* ---------- print ---------- */
+@media print{
+  :root{--rail:110px;--gap:26px;--measure:auto}
+  body{background:#fff;font-size:10.5pt;line-height:1.45}
+  #progress,#toc{display:none !important}
+  .wrap{max-width:100%;padding:0}
+  section{break-inside:auto;border-top:1px solid #999;padding:18pt 0 4pt}
+  h2,h3,h4{break-after:avoid}
+  blockquote,.note,.confronto,.tbl{break-inside:avoid}
+  .stage{border:1px solid #bbb}
+  .confronto{gap:0;border:none}
+  a{color:inherit;text-decoration:none}
+  .fls,.file{background:none;border:1px solid #ccc}
+}
+
+/* ---------- floating index ---------- */
+#toc{
+  position:fixed;right:22px;top:50%;transform:translateY(-50%);
+  z-index:50;text-align:right;
+}
+#toc a{
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-3);text-decoration:none;
+  padding:5px 0;opacity:.55;transition:opacity .18s,color .18s;
+}
+#toc a:hover,#toc a.on{opacity:1;color:var(--oxide)}
+@media (max-width:1320px){#toc{display:none}}
+
+:focus-visible{outline:2px solid var(--oxide);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav id="toc" aria-label="Índice">
+  <a href="#s1">1 · Objeto</a>
+  <a href="#s2">2 · Fatos</a>
+  <a href="#s3">3 · Teses</a>
+  <a href="#s4">4 · Lacunas</a>
+  <a href="#s5">5 · Instrução</a>
+  <a href="#s6">6 · Pedidos</a>
+  <a href="#s7">7 · Síntese</a>
+</nav>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Análise técnico-jurídica · uso interno da defesa</p>
+    <h1>Reversão de justa causa<br>SERPRO</h1>
+    <p class="proc">0011652-20.2025.5.03.0037</p>
+    <dl class="facts">
+      <div class="fact"><dt>Juízo</dt><dd>3ª Vara do Trabalho de Juiz de Fora — TRT-3</dd></div>
+      <div class="fact"><dt>Autor</dt><dd>Alexandre José da Silva Marques</dd></div>
+      <div class="fact"><dt>Réus</dt><dd>SERPRO · União Federal (PGFN / PGF / AGU)</dd></div>
+      <div class="fact"><dt>Autuação</dt><dd>28/11/2025</dd></div>
+      <div class="fact"><dt>Valor da causa</dt><dd>R$ 287.500,00</dd></div>
+      <div class="fact"><dt>Audiência inicial</dt><dd>02/02/2026</dd></div>
+      <div class="fact"><dt>Base analisada</dt><dd>PDF integral dos autos — 2.597 páginas, com PAD completo e contestação de 30/01/2026</dd></div>
+    </dl>
+  </header>
+
+  <div class="note">
+    <span class="tag">Convenção de referências</span>
+    <p style="margin:0">As indicações <span class="fls">fls. 000</span> apontam para a numeração <em>Fls.:</em> do PDF dos autos judiciais. Quando a referência é à folha do PAD, isso vem dito expressamente.</p>
+  </div>
+
+  <!-- ============ 1 ============ -->
+  <section id="s1">
+    <div class="row">
+      <div class="rail">Seção 1<br>Objeto da acusação</div>
+      <div class="col">
+        <h2>A acusação mudou de objeto três vezes</h2>
+        <p>Este é o eixo de toda a defesa. Há três versões da acusação nos autos, e elas não se sustentam mutuamente. A comparação abaixo é o achado central desta análise.</p>
+
+        <div class="confronto">
+          <article class="stage">
+            <p class="no">FASE I</p>
+            <h5>Juízo de Admissibilidade nº 057/2022</h5>
+            <p class="date">08/12/2023 · <span class="fls">fls. 182 · 223</span></p>
+            <p class="charge">Uso da estação <span class="file">RF0610400023021</span> como servidor de apostas; alteração de regras de firewall; risco de ransomware no domínio; conflito de interesses.</p>
+            <ul class="evid">
+              <li><span class="mk">›</span> Nota COTEC/DISEG nº 78</li>
+              <li><span class="mk">›</span> Logs Defender / Azure AD</li>
+              <li><span class="mk">›</span> Artefatos coletados</li>
+              <li><span class="mk">›</span> Consultas em fontes abertas</li>
+            </ul>
+          </article>
+
+          <article class="stage narrow">
+            <p class="no">FASE II</p>
+            <h5>Termo de Indiciação</h5>
+            <p class="date">15/08/2025 · PAD p. 489/490</p>
+            <p class="charge"><em>“Possível”</em> utilização de equipamento funcional com finalidade particular; <em>“potencial”</em> conflito de interesses, exercício de atividade privada.</p>
+            <ul class="evid">
+              <li><span class="mk">›</span> Declaração do acusado</li>
+              <li><span class="mk">›</span> Juízo de admissibilidade</li>
+              <li><span class="mk">›</span> Norma GP 077</li>
+              <li><span class="mk">›</span> Declaração de não exercício</li>
+              <li><span class="mk">›</span> Consulta SeCI</li>
+              <li class="gone"><span class="out">×</span> Nota nº 78</li>
+              <li class="gone"><span class="out">×</span> Logs Defender</li>
+              <li class="gone"><span class="out">×</span> Artefatos</li>
+            </ul>
+          </article>
+
+          <article class="stage final">
+            <p class="no">FASE III</p>
+            <h5>Relatório Final e Decisão de Julgamento</h5>
+            <p class="date">2025 · <span class="fls">fls. 939 · 946</span></p>
+            <p class="charge"><strong>Somente</strong> a ausência de consulta prévia ao SeCI — “inobservância de dever funcional previsto em norma interna”, item 4.8.3 da Norma GP 077.</p>
+            <ul class="evid">
+              <li><span class="mk">›</span> Consulta SeCI</li>
+              <li><span class="mk">›</span> Declaração de não exercício</li>
+              <li><span class="mk">›</span> Norma GP 077</li>
+            </ul>
+          </article>
+        </div>
+        <p class="confronto-cap">Da esquerda para a direita, a imputação se estreita de um incidente de segurança cibernética até uma omissão de formulário. A contestação judicial, porém, retorna à Fase I.</p>
+
+        <h3>1.1 · O Termo de Indiciação não arrola nenhuma prova técnica</h3>
+        <p>O item <strong>III — Dos elementos comprobatórios</strong> lista cinco documentos e nada mais: declaração do acusado (p. 476, Vol. III); juízo de admissibilidade (p. 480/488, Vol. III); Norma GP 077 (p. 1981, Vol. VII); declaração de não exercício de atividade (p. 479, Vol. III); consulta SeCI (p. 237/239, Vol. II).</p>
+        <p>Não constam a Nota COTEC/DISEG/RFB nº 78, nenhum log do Microsoft Defender ou do Azure AD, os artefatos <span class="file">MSRoletas.exe</span> e <span class="file">ROBO_Position.zip</span>, nem qualquer laudo sobre o HD apreendido.</p>
+        <div class="note key">
+          <span class="tag">Consequência</span>
+          <p style="margin:0">A peça que delimita a acusação — e sobre a qual o indiciado se defendeu — não invoca uma única prova de informática.</p>
+        </div>
+
+        <h3>1.2 · A Comissão declarou por escrito que o incidente ficou fora do objeto</h3>
+        <blockquote>
+          <p>A comissão registra que tais pontos não constaram do Termo de Indiciação, que delimitou a matéria a ser analisada, nos termos da Norma TR-011, assim não serão objeto de apreciação nesse relatório por extrapolarem os limites do Termo de Indiciação.</p>
+          <cite>Relatório Final, item 5.2 — <span class="fls">fls. 939</span></cite>
+        </blockquote>
+        <p>Isso foi dito para <strong>indeferir</strong> os pedidos de perícia e de oitiva das testemunhas da RFB. A exclusão do incidente de segurança foi a razão declarada para negar a prova.</p>
+
+        <h3>1.3 · A contestação reabre exatamente o que foi excluído</h3>
+        <p>A contestação do SERPRO (ID <span class="file">ed8a695</span>, 30/01/2026) dedica os §§ 86 a 111 — <span class="fls">fls. 1239/1250</span> — a sustentar alteração de regras de firewall, exposição do serviço à internet, risco de ransomware em todo o domínio e, no § 110, “desvio funcional de elevada gravidade que expôs a risco concreto dados de cidadãos e a infraestrutura crítica de tecnologia da informação do Estado brasileiro”.</p>
+        <p>Nenhum desses fatos integrou o Termo de Indiciação, foi analisado no Relatório Final ou fundamentou a Decisão de Julgamento.</p>
+        <div class="note key">
+          <span class="tag">Tese sugerida — o dilema</span>
+          <p>Aplica-se de forma quase didática a <strong>teoria dos motivos determinantes</strong>: o ato administrativo se vincula ao motivo que declarou. O SERPRO declarou como motivo a falta de consulta ao SeCI e não pode, em juízo, sustentar a demissão por motivo diverso e mais grave — sobretudo um motivo que ele próprio afirmou estar fora do objeto para negar produção de prova.</p>
+          <p style="margin:0">Ou o fato integrava a acusação, e houve cerceamento de defesa; ou não integrava, e a contestação inova. Convém formular a tese exatamente assim: <strong>dilema, não alternativa</strong>. Não há terceira via, e o réu não pode escolher.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2 ============ -->
+  <section id="s2">
+    <div class="row">
+      <div class="rail">Seção 2<br>Os dois pontos de fato</div>
+      <div class="col">
+        <h2>O que os autos efetivamente dizem</h2>
+
+        <h3>2.1 · A máquina estava em casa e o IP registrado é residencial</h3>
+        <p>Os autos confirmam isso, e a confirmação vem da própria acusação. Na tabela de identificação do dispositivo, elaborada pela DISEG/RFB e reproduzida no Juízo de Admissibilidade — <span class="fls">fls. 193</span> — consta:</p>
+
+        <div class="tbl-scroll">
+        <table class="tbl">
+          <thead><tr><th>Campo</th><th>Valor lançado pela RFB</th></tr></thead>
+          <tbody>
+            <tr><td>Nome do dispositivo na RFB</td><td><span class="file">RF0610400023021</span></td></tr>
+            <tr><td><strong>Endereço IP na RFB</strong></td><td><strong style="color:var(--oxide)">Teletrabalho</strong></td></tr>
+            <tr><td>Endereço IP e identificar a console consultada</td><td>“Conforme arquivo anexo <span class="file">informações de rede alexandre.csv</span>, Microsoft Defender for Endpoints”</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p>O campo destinado ao endereço IP institucional está preenchido com uma única palavra: <strong>“Teletrabalho”</strong>. A RFB não teve um IP da própria rede a informar, porque a estação não estava na rede da RFB.</p>
+        <p>O IP efetivamente registrado no e-mail do Sr. Felipe Mendes Moraes — <span class="fls">fls. 182</span> — é <span class="file">191.54.14.146</span>, acessado pelo domínio dinâmico <span class="file">hsa.ddns.net</span>: banda larga com DNS dinâmico, não um bloco institucional.</p>
+
+        <blockquote>
+          <p>a gente passou a atender em casa e os atendimentos eram exclusivamente remotos</p>
+          <cite>Depoimento no PAD, 40:49 min</cite>
+        </blockquote>
+
+        <p>A defesa administrativa já registrou que o SERPRO não forneceu equipamento institucional para trabalho remoto na pandemia — <span class="fls">fls. 762</span> — o que explica a coexistência de uso pessoal e funcional na mesma máquina.</p>
+
+        <h4>Consequência jurídica</h4>
+        <p>Toda a narrativa de “aumento da superfície de ataque à rede da RFB” pressupõe a estação conectada à rede corporativa via VPN. Se o serviço HTTP estava exposto no IP residencial e o dispositivo operava em teletrabalho, o que se expôs foi a rede doméstica. O nexo entre o serviço e o risco institucional não foi demonstrado — foi inferido. A própria Nota usa o verbo: <em>“infere-se que o dispositivo RFB estaria sendo utilizado como servidor de testes”</em> <span class="fls">fls. 182</span>.</p>
+
+        <h4>O que fazer com isso na instrução</h4>
+        <ol>
+          <li><strong>Prova documental imediata e barata:</strong> consulta WHOIS/RDAP ao <span class="file">registro.br</span>/LACNIC do IP <span class="file">191.54.14.146</span>, imprimindo o AS e o bloco de alocação. Se retornar operadora comercial de banda larga, isso sozinho desmonta o § 87 da contestação.</li>
+          <li><strong>Ofício ao provedor</strong> — Marco Civil, art. 15, guarda de registros de conexão — para identificar a quem estava atribuído o IP em 07/11/2022.</li>
+          <li><strong>Requerer o arquivo</strong> <span class="file">informações de rede alexandre.csv</span>, expressamente citado na tabela de <span class="fls">fls. 193</span> e nunca juntado.</li>
+          <li><strong>Requerer o “quantitativo de IPs de origem registrados nos logs do serviço”</strong> mencionado em <span class="fls">fls. 182</span>. Foi a base da inferência de “servidor de testes” e nunca foi exibido.</li>
+        </ol>
+
+        <div class="note warn">
+          <span class="tag">Atenção ao prazo</span>
+          <p style="margin:0">O prazo legal de guarda de registros de conexão é de um ano e provavelmente já expirou. Nesse caso, o ônus da não-produção recai sobre quem tinha o dever de coletar em 2022 e não coletou — não sobre o autor.</p>
+        </div>
+
+        <h4>Perguntas às testemunhas da RFB — Felipe Mendes Moraes e Ênio Onodera</h4>
+        <ul>
+          <li>Em 07/11/2022, a estação <span class="file">RF0610400023021</span> estava em dependência da RFB ou em residência do empregado?</li>
+          <li>Por que o campo “Endereço IP na RFB” foi preenchido com “Teletrabalho”?</li>
+          <li>O IP <span class="file">191.54.14.146</span> pertence a bloco da Receita Federal, do SERPRO ou de operadora comercial?</li>
+          <li>A VPN estava ativa quando o serviço HTTP foi detectado? Existe log de sessão VPN simultânea à exposição do serviço?</li>
+          <li>O arquivo <span class="file">informações de rede alexandre.csv</span> foi juntado aos autos?</li>
+        </ul>
+
+        <h3>2.2 · Os artefatos foram baixados do site pela própria investigação</h3>
+        <p>Os autos confirmam isso de forma literal. O item 49 do relatório — <span class="fls">fls. 211</span>:</p>
+        <blockquote>
+          <p>Os arquivos “MSRoletas.exe” e “ROBO_Position.zip” <strong>coletados durante a investigação</strong> estão disponíveis em “Doc.06 - Artefatos coletados”.</p>
+          <cite>Juízo de Admissibilidade, item 49 — <span class="fls">fls. 211</span></cite>
+        </blockquote>
+        <p>Os itens 41 a 45 — <span class="fls">fls. 206/210</span> — descrevem de onde vieram: os investigadores acessaram <span class="file">mestredasroletas.com.br</span> e fizeram o download público, incluindo <span class="file">/MestreDasRoletas/downloads/ROBO_Position.zip</span> e os vídeos em <span class="file">/Mentorias/</span>. O <span class="file">check256sum.txt</span> — <span class="fls">fls. 362 e ss.</span> — contém os hashes desses downloads, não de arquivos extraídos do HD. Não há, em parte alguma, hash de arquivo recuperado da imagem do disco.</p>
+
+        <p>Portanto, não existe nos autos registro de download desses arquivos pela estação, registro de execução (<span class="file">ProcessCreationEvents</span> ou equivalente), nem laudo do HD — o disco foi lacrado em 11/2022 e jamais periciado.</p>
+
+        <blockquote>
+          <p>não capturou, tampouco registrou qualquer log local ou em nuvem, de download ou execução do sistema que alegam supostamente ter sido desenvolvido, testado e executado na máquina de nome rf0610400023021.</p>
+          <cite>Defesa administrativa — <span class="fls">fls. 765</span></cite>
+        </blockquote>
+
+        <p>O argumento de coerência interna — <span class="fls">fls. 764/765</span> — é forte: o Defender também não registrou o Roblox, que indiscutivelmente estava na máquina. Se a ferramenta não capturou o que sabidamente existia, não pode ser invocada como prova do que se alega.</p>
+
+        <h4>O § 92 da contestação é uma concessão decisiva</h4>
+        <blockquote class="adverse">
+          <p>É importante registrar que, a materialidade não estava no conteúdo do HD, mas no log de rede que registrou a abertura de portas de firewall. Explicar que a perícia no HD seria inútil porque o ilícito foi a exposição da rede (ato de tráfego), fato já comprovado pelos logs da DISEG</p>
+          <cite>Contestação do SERPRO, § 92 — <span class="fls">fls. 1245</span></cite>
+        </blockquote>
+
+        <p><strong>(a) É uma admissão.</strong> O SERPRO reconhece que não há materialidade no conteúdo do HD. Isso encerra qualquer imputação de download, instalação ou execução dos binários na estação, e a acusação de “instalação de arquivos não relacionados às atividades laborais” — <span class="fls">fls. 223</span> — fica sem lastro por manifestação do próprio réu.</p>
+
+        <p><strong>(b) A frase está redigida em modo imperativo.</strong> “Explicar que a perícia no HD seria inútil” é uma instrução de redação que permaneceu no texto protocolado. Vale registrar em impugnação ou memorial: revela que o argumento foi construído <em>para</em> neutralizar o pedido de perícia, e não extraído do conjunto probatório. Recomendo tratar o ponto com sobriedade técnica, sem ironia — o peso do achado já é suficiente.</p>
+
+        <p><strong>(c) O “log de rede” invocado também não está nos autos.</strong> O SERPRO afirma que a materialidade reside no log que registrou a abertura de portas de firewall. Esse log nunca foi juntado; o que existe é a narrativa da Nota nº 78 dizendo que houve alteração de firewall, não o registro de auditoria correspondente. Requeira-o nominalmente: se o réu diz que a materialidade está nesse documento, a não-exibição atrai o art. 400 do CPC.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 ============ -->
+  <section id="s3">
+    <div class="row">
+      <div class="rail">Seção 3<br>Mapa das teses</div>
+      <div class="col">
+        <h2>Força relativa de cada tese</h2>
+
+        <h3>Força altíssima — fáticas, documentais, incontroversas</h3>
+
+        <h4>A · Inovação da causa de pedir</h4>
+        <p>Desenvolvida na Seção 1. É a tese mais forte do caso porque não depende de perícia nem de testemunha: está no confronto entre o Termo de Indiciação (PAD p. 489/490), o item 5.2 do Relatório Final <span class="fls">fls. 939</span> e os §§ 86-111 da contestação <span class="fls">fls. 1239/1250</span>.</p>
+
+        <h4>B · Cerceamento de defesa em pinça</h4>
+        <p>Se o incidente de segurança integra a acusação, a negativa de perícia e de oitiva de Felipe Mendes Moraes, Ênio Onodera, Adriana Meiko Eguchi Asami e Guilherme Bibiani Neto é nulidade absoluta. Se não integra, a demissão por ato de improbidade (art. 482, “a”, CLT) está desproporcional a uma falha meramente procedimental e a contestação inova.</p>
+
+        <h4>C · Perdão tácito e <em>venire contra factum proprium</em></h4>
+        <p>Duas promoções durante o PAD: por tempo de serviço, Edital nº 03 de 16/08/2024; e por mérito, Edital nº 03 de 16/04/2025, período avaliativo de julho/2024 a fevereiro/2025.</p>
+        <p>O edital de mérito exige, como requisito de habilitação, não ter recebido penalidade no período avaliativo e não ter censura ética vigente. Ao promover por mérito, a SUPES atestou formalmente que a conduta estava alinhada aos interesses da empresa, inclusive no plano disciplinar — ato incompatível com a intenção de punir, praticado após a ciência integral dos fatos (11/2022) e durante o PAD (instaurado em 06/02/2024).</p>
+        <div class="note">
+          <span class="tag">Reforço sugerido</span>
+          <p style="margin:0">Requerer a juntada do ato de concessão nominal de ambas as promoções — e não apenas dos editais — além do parecer da SUPES sobre elegibilidade, para fechar a prova de que a área de pessoas certificou a inexistência de óbice disciplinar.</p>
+        </div>
+
+        <h4>D · Ausência de dano</h4>
+        <p>O extrato SISCOR/CGU com zero prejuízo declarado à União, se já estiver nos autos, deve ser destacado. O ato de improbidade do art. 482, “a”, exige lesão ou intenção de lesar o patrimônio. Sem dano e sem dolo, o enquadramento cai.</p>
+
+        <h3>Força alta — jurídicas, dependentes de valoração</h3>
+
+        <h4>E · Excesso de prazo e decadência procedimental</h4>
+        <p>De 21/11/2022 (pedido de abertura de denúncia) a 06/02/2024 (instauração do PAD) transcorreram 1 ano, 2 meses e 25 dias apenas para deflagrar o procedimento. Somam-se seis prorrogações com justificativa padronizada <span class="fls">fls. 949</span>. A inicial aponta 637 dias de excesso. A Norma TR 011 fixa prazos que o próprio SERPRO descumpriu — norma interna que vincula a Administração.</p>
+
+        <h4>F · Desproporcionalidade</h4>
+        <p>Se a falta é apenas não ter consultado o SeCI, a Norma TR 02 prevê resolução consensual para situações de menor potencial ofensivo, e o TAC como medida adequada. Aplicar a pena capital a dezesseis anos de contrato sem antecedente disciplinar, logo após promoção por mérito, viola a razoabilidade. O precedente do TST citado na inicial (AIRR 0000071-84.2022.5.10.0015, Rel. Min. Morgana de Almeida Richa) é pertinente.</p>
+
+        <h4>G · Atipicidade do conflito de interesses</h4>
+        <p>O cargo é Técnico — Operação de Redes, cujo catálogo de atribuições veda expressamente desenvolver sistemas. A atividade privada não concorre com a linha de negócio do SERPRO (arrecadação, cidadania digital, segurança de dados governamentais). Sem pertinência temática, sem uso de informação privilegiada e sem cláusula de exclusividade no contrato, não há conflito material — no máximo, omissão formal de comunicação.</p>
+
+        <h3>Pontos que exigem cuidado — o que o SERPRO tem de melhor</h3>
+        <p>Convém ser realista sobre isto ao preparar a instrução.</p>
+
+        <div class="tbl-scroll">
+        <table class="tbl">
+          <thead><tr><th>Ponto adverso</th><th>Como enquadrar</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>A “confissão” no depoimento.</strong> O item II do Termo de Indiciação afirma que a autoria foi confessada (p. 476). No áudio, em 1:04:25: <em>“Fiz esse projeto, não fiz ele completo porque o meu cunhado…”</em></td>
+              <td>A resposta não é negar, é enquadrar. Foi confessada participação no desenvolvimento de software de terceiro, em máquina própria, fora do horário — não uso da estação da RFB. A confissão é de atividade privada, não de uso de equipamento público. O depoimento pessoal em juízo deve manter essa linha, sem recuo e sem ampliação.</td>
+            </tr>
+            <tr>
+              <td><strong>O domínio</strong> <span class="file">mestredasroletas.com.br</span> registrado no CPF do autor, com e-mail e telefone coincidentes.</td>
+              <td>Liga o autor ao projeto, mas não à máquina da RFB. Distinção a manter firme.</td>
+            </tr>
+            <tr>
+              <td><strong>A pasta “SERPRO”</strong> na barra de favoritos e a pasta <span class="file">.serpro</span> no perfil, vistas nos frames de vídeo.</td>
+              <td>A defesa administrativa já respondeu bem <span class="fls">fls. 762</span>: eram links institucionais usados em atendimentos remotos na pandemia, quando o SERPRO não forneceu equipamento próprio. Reforçar requerendo a política de teletrabalho vigente em 2020/2022 e a prova da inexistência de fornecimento de notebook institucional.</td>
+            </tr>
+            <tr>
+              <td><strong>O AnyDesk</strong>, comunicado ao autor em 07/11/2022.</td>
+              <td>Se houve orientação e ela foi atendida, isso é sanção fática anterior e alimenta o <em>non bis in idem</em> já suscitado. A RFB puniu o fato em novembro de 2022 — remoção de privilégios em 11/11, revogação do certificado A3 em 17/11, substituição da estação. O SERPRO pune o mesmo fato de novo, três anos depois.</td>
+            </tr>
+            <tr>
+              <td><strong>Presunção de legitimidade do ato administrativo</strong>, invocada nos §§ 92-93 com jurisprudência real.</td>
+              <td>A presunção é relativa e cede diante da ausência do documento em que a própria ré diz residir a materialidade, da contradição entre motivo declarado e motivo defendido, e do ato incompatível da promoção por mérito.</td>
+            </tr>
+            <tr>
+              <td><strong>A alegação de que o autor “não impugnou tecnicamente” a Nota nº 78</strong> (§ 93).</td>
+              <td>É factualmente errado: a defesa administrativa <span class="fls">fls. 758/770</span> faz impugnação técnica detalhada e nominal. Apontar a inexatidão de forma objetiva, indicando as folhas.</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 ============ -->
+  <section id="s4">
+    <div class="row">
+      <div class="rail">Seção 4<br>Lacunas probatórias</div>
+      <div class="col">
+        <h2>Documentos invocados e nunca juntados</h2>
+        <p>Cada item abaixo é candidato a requerimento com incidência do art. 400 do CPC — admissão dos fatos que se pretendia provar, em caso de não-exibição.</p>
+
+        <div class="tbl-scroll">
+        <table class="tbl">
+          <thead><tr><th></th><th>Documento</th><th>Onde é invocado</th><th>Por que importa</th></tr></thead>
+          <tbody>
+            <tr><td class="n">01</td><td><span class="file">informações de rede alexandre.csv</span></td><td><span class="fls">fls. 193</span></td><td>Fonte declarada do endereçamento de rede</td></tr>
+            <tr><td class="n">02</td><td>Log de alteração de regras de firewall</td><td>Contestação § 92 — <span class="fls">fls. 1245</span></td><td>O réu diz que <em>é ali</em> que está a materialidade</td></tr>
+            <tr><td class="n">03</td><td>Logs de sessão VPN em 07/11/2022</td><td>Nota nº 78 — <span class="fls">fls. 182</span></td><td>Sem VPN ativa, não há exposição da rede RFB</td></tr>
+            <tr><td class="n">04</td><td>Logs de origem dos acessos ao serviço HTTP</td><td>Nota nº 78 — <span class="fls">fls. 182</span></td><td>Base da inferência “servidor de testes”</td></tr>
+            <tr><td class="n">05</td><td>Registro de download dos binários pela estação</td><td>—</td><td>Nunca existiu nos autos</td></tr>
+            <tr><td class="n">06</td><td>Registro de execução (<span class="file">ProcessCreation</span>) dos binários</td><td>—</td><td>Nunca existiu nos autos</td></tr>
+            <tr><td class="n">07</td><td>Laudo ou imagem forense do HD série <span class="file">WL1P9Y08</span></td><td><span class="fls">fls. 193</span> — lacrado em 11/2022</td><td>Único meio de provar instalação ou execução</td></tr>
+            <tr><td class="n">08</td><td>Termo de cadeia de custódia do HD</td><td><span class="fls">fls. 182</span></td><td>Não há nenhuma menção a cadeia de custódia em 2.597 páginas</td></tr>
+            <tr><td class="n">09</td><td>Petição defensiva de 22/05/2024</td><td>Inicial — <span class="fls">fls. 12</span></td><td>Foi suprimida dos autos do PAD</td></tr>
+            <tr><td class="n">10</td><td>Resposta ao Ofício nº 012552/2023/CORRD/RDINC</td><td><span class="fls">fls. 222</span></td><td>A própria Corregedoria registra que não foi atendido</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="note key">
+          <span class="tag">Item 08 — cadeia de custódia</span>
+          <p style="margin:0">É um vetor autônomo. O HD foi removido, lacrado e mantido sob custódia do Chefe da Satec/DRF/JFA — pessoa da tomadora de serviços, não perito — sem termo formal, sem hash de imagem, por mais de três anos. Qualquer perícia hoje enfrenta essa objeção; mas a objeção é do réu, porque a custódia era dele.</p>
+        </div>
+
+        <div class="note key">
+          <span class="tag">Item 10 — normas de segurança</span>
+          <p style="margin:0">Consta expressamente de <span class="fls">fls. 222</span> que a RFB não atendeu à solicitação de normas de segurança feita pela Corregedoria do SERPRO. Vale dizer: o SERPRO puniu por violação de normas de segurança da RFB sem ter recebido as normas de segurança da RFB.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5 ============ -->
+  <section id="s5">
+    <div class="row">
+      <div class="rail">Seção 5<br>Instrução</div>
+      <div class="col">
+        <h2>Estratégia para a audiência</h2>
+
+        <h4>Ordem de exposição — do mais objetivo ao mais argumentativo</h4>
+        <ol class="steps">
+          <li><strong>Abrir pelo Termo de Indiciação.</strong> Ler os itens I, III e IV em voz alta. Fixar: a acusação é a falta de consulta ao SeCI, e a lista de provas tem cinco itens, nenhum técnico.</li>
+          <li><strong>Confrontar com o item 5.2 do Relatório Final.</strong> A própria Comissão disse que o incidente estava fora do objeto.</li>
+          <li><strong>Confrontar com os §§ 86-111 da contestação.</strong> O réu volta ao que excluiu.</li>
+          <li><strong>Fechar com o § 92.</strong> O réu admite que não há materialidade no HD.</li>
+          <li><strong>Só então</strong> entrar na prova técnica — IP e teletrabalho, ausência de logs — já num terreno em que o réu perdeu a coerência.</li>
+          <li><strong>Perdão tácito ao final</strong>, como fecho. É a tese de maior apelo intuitivo para o julgador.</li>
+        </ol>
+
+        <h4>Sobre as testemunhas</h4>
+        <p>Felipe Mendes Moraes e Ênio Onodera são as mais úteis, por serem os autores materiais da narrativa. Ênio Onodera assina o Juízo de Admissibilidade <span class="fls">fls. 224</span>; Guaraçay Augusto Ribeiro da Silva coordenou a Comissão na fase final. As perguntas devem ser fechadas e documentais — <em>existe o arquivo X? o IP Y pertence a que bloco?</em> — e não abertas: testemunha técnica com pergunta aberta reconstrói a narrativa.</p>
+
+        <h4>Sobre a perícia judicial</h4>
+        <p>Vale requerer, com escopo delimitado e pedido subsidiário. Se o HD estiver íntegro, perícia sobre presença e execução dos binários e sobre configuração de firewall. Se estiver degradado ou sem cadeia de custódia idônea, requerer que o Juízo consigne que a impossibilidade decorre de conduta da ré, com as consequências do art. 400 do CPC. Formular assim evita que a resposta “o disco não presta mais” vire vitória do réu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6 ============ -->
+  <section id="s6">
+    <div class="row">
+      <div class="rail">Seção 6<br>Pedidos</div>
+      <div class="col">
+        <h2>Pedidos e exposição econômica</h2>
+
+        <div class="tbl-scroll">
+        <table class="tbl">
+          <tbody>
+            <tr><td style="width:38%"><strong>Pedido principal</strong></td><td>Nulidade da dispensa, reintegração e salários do período</td></tr>
+            <tr><td><strong>Pedido subsidiário</strong></td><td>Conversão em dispensa imotivada — verbas rescisórias estimadas em R$ 114.913,84, sem juros e correção</td></tr>
+            <tr><td><strong>Dano moral</strong></td><td>Postulado, fundado em imputação pública de improbidade</td></tr>
+            <tr><td><strong>Valor da causa</strong></td><td>R$ 287.500,00</td></tr>
+            <tr><td><strong>Responsabilidade da União</strong></td><td>Subsidiária, como tomadora — culpa <em>in vigilando</em></td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="note warn">
+          <span class="tag">Tutela de urgência</span>
+          <p style="margin:0">Foi indeferida em 03/12/2025 — <span class="fls">fls. 1156/1158</span>. O indeferimento não prejudica o mérito, mas indica que a prova documental isolada não convenceu de plano. Isso reforça que a instrução precisa produzir o confronto documental de forma explícita e organizada: o material está nos autos, mas diluído em 2.597 páginas. Um memorial com o quadro comparativo da Seção 1 tende a ser mais eficaz que a repetição das teses.</p>
+        </div>
+
+        <div class="note">
+          <span class="tag">Regime de precatórios</span>
+          <p style="margin:0">Há farto material nos autos — RCL 85.936, ACO 2.658, decisões do TRT-10 — sobre o SERPRO gozar de prerrogativas de Fazenda Pública. Isso é relevante para a execução, não para o mérito, mas convém considerar desde já que eventual condenação pecuniária seguirá rito de precatório. Isso torna a reintegração, obrigação de fazer, economicamente mais valiosa que a conversão em indenização.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7 ============ -->
+  <section id="s7">
+    <div class="row">
+      <div class="rail">Seção 7<br>Síntese</div>
+      <div class="col">
+        <h2>Cinco linhas</h2>
+        <ol class="synth">
+          <li>A demissão foi formalmente motivada pela <strong>falta de consulta prévia ao SeCI</strong> — uma omissão procedimental — e não pelo incidente de segurança.</li>
+          <li>O Termo de Indiciação <strong>não arrola nenhuma prova técnica</strong>, e a Comissão declarou por escrito que o incidente estava fora do objeto para negar perícia.</li>
+          <li>A contestação judicial <strong>reabre o incidente</strong>, contradizendo o próprio ato administrativo — inovação vedada pela teoria dos motivos determinantes.</li>
+          <li>As alegações sobre o IP e sobre os artefatos estão <strong>documentadas nos autos pela própria acusação</strong>: campo “Endereço IP na RFB: Teletrabalho” <span class="fls">fls. 193</span>, IP residencial com DDNS <span class="fls">fls. 182</span>, artefatos “coletados durante a investigação” a partir do site público <span class="fls">fls. 211</span>, e admissão de que não há materialidade no HD <span class="fls">fls. 1245</span>.</li>
+          <li>Sobre isso incidem, ainda, <strong>perdão tácito</strong> — duas promoções, uma por mérito, durante o PAD —, <strong>excesso de prazo</strong> e <strong>desproporcionalidade</strong>.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="row">
+      <div class="rail">Nota final</div>
+      <div class="col">
+        Documento preparado a partir da leitura integral do PDF dos autos.<br>
+        Não constitui parecer jurídico; destina-se a subsidiar o trabalho dos advogados constituídos.<br>
+        Processo nº 0011652-20.2025.5.03.0037 · 3ª Vara do Trabalho de Juiz de Fora · TRT-3
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('progress');
+  var links=[].slice.call(document.querySelectorAll('#toc a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+
+  function tick(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';
+
+    var best=0;
+    for(var i=0;i<secs.length;i++){
+      if(secs[i] && secs[i].getBoundingClientRect().top<h.clientHeight*0.35) best=i;
+    }
+    links.forEach(function(a,i){a.classList.toggle('on',i===best);});
+  }
+  window.addEventListener('scroll',tick,{passive:true});
+  window.addEventListener('resize',tick);
+  tick();
+})();
+</script>
+</body>
+</html>
